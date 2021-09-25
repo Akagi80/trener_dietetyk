@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Header } from '../Header/Header';
-import { Footer } from '../Footer/Footer';
+import { Blog } from '../../Common/Blog/Blog';
 
 import clsx from 'clsx';
 
-import styles from './MainLayout.module.scss';
+import styles from './Homepage.module.scss';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <Header/>
+    <h2>Homepage</h2>
     {children}
-    <Footer/>
+    <Blog/>
   </div>
 );
 
@@ -21,5 +20,5 @@ Component.propTypes = {
 };
 
 export {
-  Component as MainLayout,
+  Component as Homepage,
 };
