@@ -11,10 +11,12 @@ import { MainLayout } from './components/layout/MainLayout/MainLayout';
 import { Homepage } from './components/views/Homepage/Homepage';
 import { About } from './components/views/About/About';
 import { Contact } from './components/views/Contact/Contact';
+import { Achievements } from './components/views/Achievements/Achievements';
+import { Gallery } from './components/views/Gallery/Gallery';
 
 const theme = createTheme({
   palette: {
-    primary: { main: '#2B4C6F' },
+    primary: { main: '#ebebeb' },
   },
 });
 
@@ -29,6 +31,8 @@ const App = () => (
               <Route exact path='/' component={Homepage} />
               <Route exact path='/about' component={About} />
               <Route exact path='/contact' component={Contact} />
+              <Route exact path='/achievs' component={Achievements} />
+              <Route exact path='/gallery' component={Gallery} />
             </Switch>
           </MainLayout>
         </ThemeProvider>

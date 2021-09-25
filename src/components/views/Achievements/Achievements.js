@@ -1,19 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Header } from '../Header/Header';
-import { Footer } from '../Footer/Footer';
 
 import clsx from 'clsx';
 
-import styles from './MainLayout.module.scss';
+import styles from './Achievements.module.scss';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <Header/>
-    <div className={styles.content}>
-      {children}
-    </div>
-    <Footer/>
+    <h2>Achievements</h2>
+    {children}
   </div>
 );
 
@@ -23,5 +18,5 @@ Component.propTypes = {
 };
 
 export {
-  Component as MainLayout,
+  Component as Achievements,
 };

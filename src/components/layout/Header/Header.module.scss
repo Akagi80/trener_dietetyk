@@ -1,4 +1,68 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+
+  .appBar {
+    background-color: $main-color;
+    font-size: 16px;
+    color: $main-text-color;
+    position: fixed;
+    margin: 0;
+    top: 0;
+
+    .logo {
+      max-width: 50px;
+      border-radius: 50px;
+      border: 2px solid $sec-text-color;
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      font-style: italic;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-top: 10px;
+
+      span {
+        font-size: 26px;
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: 20px;
+        color: $sec-text-color;
+      }
+    }
+
+    .menu {
+      display: inline-block;
+      margin-left: 30px;
+
+      p {
+        margin: 0;
+        position: relative;
+      }
+
+      p:hover {
+        color: $sec-text-color;
+      }
+
+      p::before {
+        display: block;
+        position: absolute;
+        background-color: $main-text-color;
+        content: '';
+        height: 2px;
+        width: 0;
+        top: 25px;
+        transition: all 0.5s;
+      }
+
+      p:hover::before {
+        width: 100%;
+        background-color: $sec-text-color;
+      }
+    }
+  }
+}
